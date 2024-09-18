@@ -9,7 +9,7 @@ import io
 # Function to connect to MySQL and execute a query
 def execute_query(query, params=None):
     try:
-        connection = pymysql.connect(host='127.0.0.1', user='root', passwd='Nyshel@2021', database='project')
+        connection = pymysql.connect(host='endpoint', user='root', passwd='******2021', database='project')
         df = pd.read_sql(query, connection, params=params)
         return df
     except Exception as e:
